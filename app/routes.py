@@ -8,6 +8,7 @@ from app.forms import LoginForm, RegistrationForm, EditProfileForm, \
     VehicleForm
 from app.models import User, Post, Vehicle
 from app.email import send_password_reset_email
+from config import Config
 
 
 @app.before_request
