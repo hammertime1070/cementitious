@@ -1,89 +1,39 @@
-2020-06-27 17:17:49,986 INFO: Microblog startup [in C:\Users\Matthew\PycharmProjects\cementitious\app\__init__.py:49]
-2020-06-27 17:18:28,174 INFO: Microblog startup [in C:\Users\Matthew\PycharmProjects\cementitious\app\__init__.py:49]
-2020-06-27 17:19:35,964 INFO: Microblog startup [in C:\Users\Matthew\PycharmProjects\cementitious\app\__init__.py:49]
-2020-06-27 17:20:54,634 INFO: Microblog startup [in C:\Users\Matthew\PycharmProjects\cementitious\app\__init__.py:49]
-2020-06-27 17:21:03,904 INFO: Microblog startup [in C:\Users\Matthew\PycharmProjects\cementitious\app\__init__.py:49]
-2020-06-27 17:21:07,373 INFO: Microblog startup [in C:\Users\Matthew\PycharmProjects\cementitious\app\__init__.py:49]
-2020-06-27 17:25:02,249 INFO: Microblog startup [in C:\Users\Matthew\PycharmProjects\cementitious\app\__init__.py:49]
-2020-06-28 02:02:07,828 INFO: Microblog startup [in C:\Users\Matthew\PycharmProjects\cementitious\app\__init__.py:49]
-2020-06-28 02:02:17,109 INFO: Microblog startup [in C:\Users\Matthew\PycharmProjects\cementitious\app\__init__.py:49]
-2020-06-28 02:02:20,354 INFO: Microblog startup [in C:\Users\Matthew\PycharmProjects\cementitious\app\__init__.py:49]
-2020-06-28 02:02:45,630 ERROR: Exception on /VehicleEntry [GET] [in c:\users\matthew\pycharmprojects\cementitious\venv\lib\site-packages\flask\app.py:1892]
+2020-06-29 17:21:08,513 ERROR: Exception on /view [GET] [in c:\users\mkeith\python\cementitious\venv\lib\site-packages\flask\app.py:1892]
 Traceback (most recent call last):
-  File "c:\users\matthew\pycharmprojects\cementitious\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+  File "c:\users\mkeith\python\cementitious\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
-  File "c:\users\matthew\pycharmprojects\cementitious\venv\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
-    return self.finalize_request(rv)
-  File "c:\users\matthew\pycharmprojects\cementitious\venv\lib\site-packages\flask\app.py", line 1968, in finalize_request
-    response = self.make_response(rv)
-  File "c:\users\matthew\pycharmprojects\cementitious\venv\lib\site-packages\flask\app.py", line 2098, in make_response
-    "The view function did not return a valid response. The"
-TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
-2020-06-28 02:04:16,552 INFO: Microblog startup [in C:\Users\Matthew\PycharmProjects\cementitious\app\__init__.py:49]
-2020-06-28 02:05:07,387 INFO: Microblog startup [in C:\Users\Matthew\PycharmProjects\cementitious\app\__init__.py:49]
-2020-06-28 02:05:26,511 ERROR: Exception on /VehicleEntry [POST] [in c:\users\matthew\pycharmprojects\cementitious\venv\lib\site-packages\flask\app.py:1892]
-Traceback (most recent call last):
-  File "c:\users\matthew\pycharmprojects\cementitious\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\matthew\pycharmprojects\cementitious\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+  File "c:\users\mkeith\python\cementitious\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "c:\users\matthew\pycharmprojects\cementitious\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+  File "c:\users\mkeith\python\cementitious\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "c:\users\matthew\pycharmprojects\cementitious\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+  File "c:\users\mkeith\python\cementitious\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
     raise value
-  File "c:\users\matthew\pycharmprojects\cementitious\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+  File "c:\users\mkeith\python\cementitious\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
     rv = self.dispatch_request()
-  File "c:\users\matthew\pycharmprojects\cementitious\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+  File "c:\users\mkeith\python\cementitious\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\Matthew\PycharmProjects\cementitious\app\routes.py", line 87, in vehicle_entry
-    preventative_maintenance_interval = form.preventative_maintenance_interval.data)
-  File "<string>", line 4, in __init__
-  File "c:\users\matthew\pycharmprojects\cementitious\venv\lib\site-packages\sqlalchemy\orm\state.py", line 433, in _initialize_instance
-    manager.dispatch.init_failure(self, args, kwargs)
-  File "c:\users\matthew\pycharmprojects\cementitious\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 69, in __exit__
-    exc_value, with_traceback=exc_tb,
-  File "c:\users\matthew\pycharmprojects\cementitious\venv\lib\site-packages\sqlalchemy\util\compat.py", line 178, in raise_
-    raise exception
-  File "c:\users\matthew\pycharmprojects\cementitious\venv\lib\site-packages\sqlalchemy\orm\state.py", line 430, in _initialize_instance
-    return manager.original_init(*mixed[1:], **kwargs)
-  File "c:\users\matthew\pycharmprojects\cementitious\venv\lib\site-packages\sqlalchemy\ext\declarative\base.py", line 840, in _declarative_constructor
-    "%r is an invalid keyword argument for %s" % (k, cls_.__name__)
-TypeError: 'oil_change' is an invalid keyword argument for Vehicle
-2020-06-28 02:07:21,594 INFO: Microblog startup [in C:\Users\Matthew\PycharmProjects\cementitious\app\__init__.py:49]
-2020-06-28 02:07:34,524 INFO: Microblog startup [in C:\Users\Matthew\PycharmProjects\cementitious\app\__init__.py:49]
-2020-06-28 02:08:55,433 INFO: Microblog startup [in C:\Users\Matthew\PycharmProjects\cementitious\app\__init__.py:49]
-2020-06-28 02:09:03,231 INFO: Microblog startup [in C:\Users\Matthew\PycharmProjects\cementitious\app\__init__.py:49]
-2020-06-28 02:09:47,870 INFO: Microblog startup [in C:\Users\Matthew\PycharmProjects\cementitious\app\__init__.py:49]
-2020-06-28 02:10:02,287 INFO: Microblog startup [in C:\Users\Matthew\PycharmProjects\cementitious\app\__init__.py:49]
-2020-06-28 02:10:12,666 INFO: Microblog startup [in C:\Users\Matthew\PycharmProjects\cementitious\app\__init__.py:49]
-2020-06-28 02:10:42,580 ERROR: Exception on /VehicleEntry [POST] [in c:\users\matthew\pycharmprojects\cementitious\venv\lib\site-packages\flask\app.py:1892]
-Traceback (most recent call last):
-  File "c:\users\matthew\pycharmprojects\cementitious\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\matthew\pycharmprojects\cementitious\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\matthew\pycharmprojects\cementitious\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\matthew\pycharmprojects\cementitious\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "c:\users\matthew\pycharmprojects\cementitious\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\matthew\pycharmprojects\cementitious\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\Matthew\PycharmProjects\cementitious\app\routes.py", line 87, in vehicle_entry
-    preventative_maintenance_interval = form.preventative_maintenance_interval.data)
-  File "<string>", line 4, in __init__
-  File "c:\users\matthew\pycharmprojects\cementitious\venv\lib\site-packages\sqlalchemy\orm\state.py", line 433, in _initialize_instance
-    manager.dispatch.init_failure(self, args, kwargs)
-  File "c:\users\matthew\pycharmprojects\cementitious\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 69, in __exit__
-    exc_value, with_traceback=exc_tb,
-  File "c:\users\matthew\pycharmprojects\cementitious\venv\lib\site-packages\sqlalchemy\util\compat.py", line 178, in raise_
-    raise exception
-  File "c:\users\matthew\pycharmprojects\cementitious\venv\lib\site-packages\sqlalchemy\orm\state.py", line 430, in _initialize_instance
-    return manager.original_init(*mixed[1:], **kwargs)
-  File "c:\users\matthew\pycharmprojects\cementitious\venv\lib\site-packages\sqlalchemy\ext\declarative\base.py", line 840, in _declarative_constructor
-    "%r is an invalid keyword argument for %s" % (k, cls_.__name__)
-TypeError: 'oil_change' is an invalid keyword argument for Vehicle
-2020-06-28 02:11:18,067 INFO: Microblog startup [in C:\Users\Matthew\PycharmProjects\cementitious\app\__init__.py:49]
-2020-06-28 02:14:23,150 INFO: Microblog startup [in C:\Users\Matthew\PycharmProjects\cementitious\app\__init__.py:49]
-2020-06-28 16:44:22,664 INFO: Microblog startup [in C:\Users\Matthew\PycharmProjects\cementitious\app\__init__.py:49]
+  File "C:\Users\mkeith\Python\cementitious\app\routes.py", line 101, in view
+    return render_template('view.html', project='view', rows = rows)
+  File "c:\users\mkeith\python\cementitious\venv\lib\site-packages\flask\templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "c:\users\mkeith\python\cementitious\venv\lib\site-packages\jinja2\environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "c:\users\mkeith\python\cementitious\venv\lib\site-packages\jinja2\environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "c:\users\mkeith\python\cementitious\venv\lib\site-packages\jinja2\environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "c:\users\mkeith\python\cementitious\venv\lib\site-packages\jinja2\loaders.py", line 127, in load
+    code = environment.compile(source, name, filename)
+  File "c:\users\mkeith\python\cementitious\venv\lib\site-packages\jinja2\environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
+  File "c:\users\mkeith\python\cementitious\venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "c:\users\mkeith\python\cementitious\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\mkeith\Python\cementitious\app\templates\view.html", line 16, in template
+    <td>{{ row.preventative_maintenance_interval</td>
+jinja2.exceptions.TemplateSyntaxError: unexpected '/'
+2020-06-29 17:21:31,748 INFO: Microblog startup [in C:\Users\mkeith\Python\cementitious\app\__init__.py:49]
+2020-06-29 17:24:16,037 INFO: Microblog startup [in C:\Users\mkeith\Python\cementitious\app\__init__.py:49]
+2020-06-29 17:24:36,795 INFO: Microblog startup [in C:\Users\mkeith\Python\cementitious\app\__init__.py:49]
+2020-06-29 17:25:20,885 INFO: Microblog startup [in C:\Users\mkeith\Python\cementitious\app\__init__.py:49]

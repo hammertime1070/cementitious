@@ -1,5 +1,5 @@
 from datetime import datetime
-from flask import render_template, flash, redirect, url_for, request
+from flask import render_template, flash, redirect, url_for, request, jsonify
 from flask_login import login_user, logout_user, current_user, login_required
 from werkzeug.urls import url_parse
 from app import app, db
@@ -8,7 +8,9 @@ from app.forms import LoginForm, RegistrationForm, EditProfileForm, \
     VehicleForm
 from app.models import User, Post, Vehicle
 from app.email import send_password_reset_email
+from datatables import ColumnDT, DataTables
 from config import Config
+import json
 
 
 @app.before_request
@@ -91,6 +93,22 @@ def vehicle_entry():
         flash(f"Congratulations, vehicle {form.costno.data} has been registered")
         return redirect(url_for('vehicle_entry'))
     return render_template('vehicle_entry.html', title='Vehicle Entry', form=form)
+
+
+@app.route('/view')
+def view():
+    rows = Vehicle.query.order_by(Vehicle.costno)
+    return render_template('view.html', project='view', rows = rows)
+
+
+@app.route('/data')
+def data():
+    columns = [ColumnDT(Vehicle.costno), ColumnDT(Vehicle.grease_interval),
+               ColumnDT(Vehicle.oil_change_interval), ColumnDT(Vehicle.preventative_maintenance_interval)]
+    query = db.session.query().select_from(Vehicle).filter(Vehicle.grease_interval > 1)
+    params = request.args.to_dict()
+    rowTable = DataTables(params, query, columns)
+    return jsonify(rowTable.output_result())
 
 
 @app.route('/register', methods=['GET', 'POST'])

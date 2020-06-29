@@ -28,8 +28,13 @@ class User(UserMixin, db.Model):
         secondaryjoin=(followers.c.followed_id == id),
         backref=db.backref('followers', lazy='dynamic'), lazy='dynamic')
 
+    def __unicode__(self):
+        """Give a readable representation of an instance."""
+        return '{}'.format(self.name)
+
     def __repr__(self):
-        return '<User {}>'.format(self.username)
+        """Give a unambiguous representation of an instance."""
+        return '<{}#{}>'.format(self.__class__.__name__, self.id)
 
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
