@@ -8,23 +8,25 @@
     <br>
     {% endif %}
     <table class="table table-hover">
+        <thead>
             <tr>
                 <td>Cost No</td>
                 <td>Grease</td>
                 <td>Oil Change</td>
                 <td>PM</td>
             </tr>
-    </table>
+        </thead>
     {% for row in rows %}
-        <table class="table table-hover">
+        <tbody>
             <tr>
                 <td>{{ row.costno }}</td>
                 <td>{{ row.grease_interval }}</td>
                 <td>{{ row.oil_change_interval }}</td>
                 <td>{{ row.preventative_maintenance_interval }}</td>
             </tr>
-        </table>
+        </tbody>
     {% endfor %}
+        </table>
     <nav aria-label="...">
         <ul class="pager">
             <li class="previous{% if not prev_url %} disabled{% endif %}">

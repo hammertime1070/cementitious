@@ -84,3 +84,9 @@ class Vehicle(db.Model):
     preventative_maintenance_interval = db.Column(db.Integer)
 
 
+class Service(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    costno = db.Column(db.String(4), db.ForeignKey('vehicle.costno'))
+    service_type = db.Column(db.String)
+    service_date = db.Column(db.DateTime)
+    service_odometer_reading = db.Column(db.Integer)

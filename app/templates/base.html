@@ -1,7 +1,7 @@
 {% extends 'bootstrap/base.html' %}
 
 {% block title %}
-    {% if title %}{{ title }} - Microblog{% else %}Welcome to Microblog{% endif %}
+    {% if title %}{{ title }} - Cementitious{% else %}TBH - Cementitious{% endif %}
 {% endblock %}
 
 {% block navbar %}
@@ -21,6 +21,8 @@
                     <li><a href="{{ url_for('index') }}">Home</a></li>
                     <li><a href="{{ url_for('explore') }}">Explore</a></li>
                     <li><a href="{{ url_for('vehicle_entry') }}">Vehicle Entry</a></li>
+                    <li><a href="{{ url_for('view') }}">View Vehicles</a></li>
+                    <li><a href="{{ url_for('service_entry') }}">Service Entry</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     {% if current_user.is_anonymous %}

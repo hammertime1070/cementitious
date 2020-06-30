@@ -5,8 +5,8 @@ from werkzeug.urls import url_parse
 from app import app, db
 from app.forms import LoginForm, RegistrationForm, EditProfileForm, \
     EmptyForm, PostForm, ResetPasswordRequestForm, ResetPasswordForm, \
-    VehicleForm
-from app.models import User, Post, Vehicle
+    VehicleForm, ServiceForm
+from app.models import User, Post, Vehicle, Service
 from app.email import send_password_reset_email
 from datatables import ColumnDT, DataTables
 from config import Config
@@ -94,6 +94,18 @@ def vehicle_entry():
         return redirect(url_for('vehicle_entry'))
     return render_template('vehicle_entry.html', title='Vehicle Entry', form=form)
 
+
+@app.route('/ServiceEntry', methods=['GET', 'POST'])
+def service_entry():
+    form = ServiceForm()
+    if form.validate_on_submit():
+        service = Service(costno=form.costno, service_type=form.service_type,
+                          service_date=form.service_date, service_odometer_reading=form.service_odometer_reading)
+        db.session.add(service)
+        db.session.commit()
+        flash(f"Congratulations, service has been added for {form.costno.data}")
+        return redirect(url_for('service_entry'))
+    return render_template('service_entry.html', title='Service Entry', form=form)
 
 @app.route('/view')
 def view():

@@ -37,3 +37,55 @@ jinja2.exceptions.TemplateSyntaxError: unexpected '/'
 2020-06-29 17:24:16,037 INFO: Microblog startup [in C:\Users\mkeith\Python\cementitious\app\__init__.py:49]
 2020-06-29 17:24:36,795 INFO: Microblog startup [in C:\Users\mkeith\Python\cementitious\app\__init__.py:49]
 2020-06-29 17:25:20,885 INFO: Microblog startup [in C:\Users\mkeith\Python\cementitious\app\__init__.py:49]
+2020-06-30 08:18:11,552 INFO: Microblog startup [in C:\Users\mkeith\Python\cementitious\app\__init__.py:49]
+2020-06-30 08:19:36,207 INFO: Microblog startup [in C:\Users\mkeith\Python\cementitious\app\__init__.py:49]
+2020-06-30 08:20:04,671 INFO: Microblog startup [in C:\Users\mkeith\Python\cementitious\app\__init__.py:49]
+2020-06-30 08:21:13,481 INFO: Microblog startup [in C:\Users\mkeith\Python\cementitious\app\__init__.py:49]
+2020-06-30 08:22:19,177 INFO: Microblog startup [in C:\Users\mkeith\Python\cementitious\app\__init__.py:49]
+2020-06-30 08:45:36,019 INFO: Microblog startup [in C:\Users\mkeith\Python\cementitious\app\__init__.py:49]
+2020-06-30 08:45:58,228 INFO: Microblog startup [in C:\Users\mkeith\Python\cementitious\app\__init__.py:49]
+2020-06-30 08:46:08,166 INFO: Microblog startup [in C:\Users\mkeith\Python\cementitious\app\__init__.py:49]
+2020-06-30 09:00:44,293 INFO: Microblog startup [in C:\Users\mkeith\Python\cementitious\app\__init__.py:49]
+2020-06-30 09:00:47,429 ERROR: Exception on / [GET] [in c:\users\mkeith\python\cementitious\venv\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "c:\users\mkeith\python\cementitious\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\mkeith\python\cementitious\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\mkeith\python\cementitious\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\mkeith\python\cementitious\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\mkeith\python\cementitious\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\mkeith\python\cementitious\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\mkeith\python\cementitious\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\mkeith\Python\cementitious\app\routes.py", line 35, in index
+    posts = current_user.followed_posts().paginate(
+  File "c:\users\mkeith\python\cementitious\venv\lib\site-packages\werkzeug\local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'User' object has no attribute 'followed_posts'
+2020-06-30 09:02:28,382 INFO: Microblog startup [in C:\Users\mkeith\Python\cementitious\app\__init__.py:49]
+2020-06-30 09:02:38,864 ERROR: Exception on /index [GET] [in c:\users\mkeith\python\cementitious\venv\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "c:\users\mkeith\python\cementitious\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\mkeith\python\cementitious\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\mkeith\python\cementitious\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\mkeith\python\cementitious\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\mkeith\python\cementitious\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\mkeith\python\cementitious\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\mkeith\python\cementitious\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\mkeith\Python\cementitious\app\routes.py", line 35, in index
+    posts = current_user.followed_posts().paginate(
+  File "c:\users\mkeith\python\cementitious\venv\lib\site-packages\werkzeug\local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'User' object has no attribute 'followed_posts'

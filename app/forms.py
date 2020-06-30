@@ -1,6 +1,6 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, BooleanField, SubmitField, \
-    TextAreaField, IntegerField
+    TextAreaField, IntegerField, SelectField, DateField
 from wtforms.validators import ValidationError, DataRequired, Email, EqualTo, \
     Length
 from app.models import User
@@ -74,4 +74,12 @@ class VehicleForm(FlaskForm):
     grease_interval = IntegerField('Grease Interval', validators=[DataRequired()])
     oil_change_interval = IntegerField('Oil Change Interval', validators=[DataRequired()])
     preventative_maintenance_interval = IntegerField('Preventative Maintenance Interval', validators=[DataRequired()])
+    submit = SubmitField('Submit')
+
+
+class ServiceForm(FlaskForm):
+    costno = StringField('Vehicle Number', validators=[DataRequired()])
+    service_type = SelectField('Service Type', choices=[('gr', 'Grease'),('oc', 'Oil Change'), ('pm', 'Preventative Maintenance')], validate_choice=True)
+    service_date = DateField('Service Date', validators=[DataRequired()])
+    service_odometer_reading = IntegerField('Odometer Reading', validators=[DataRequired()])
     submit = SubmitField('Submit')
